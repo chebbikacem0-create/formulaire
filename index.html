@@ -44,7 +44,18 @@ h2 {
   padding-bottom: 5px;
   font-size: 22px;
 }
+/* Header with image */
+.header-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.header-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 /* Labels and inputs */
 label {
   display: block;
@@ -126,7 +137,10 @@ button:hover {
 
 <main>
   <!-- عنوان المسابقة داخل الفورم -->
-  <h1>IoT & AI Challenge</h1>
+  <header class="header-image">
+  <img src="ChatGPT Image 13 يناير 2026، 10_53_07 م.png" alt="IoT & AI Event" />
+</header>
+
 
   <form id="registrationForm">
     <h2>Informations du chef du groupe</h2>
