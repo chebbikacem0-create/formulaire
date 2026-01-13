@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT & AI Challenge | Inscription</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(120deg, #e0eafc, #cfdef3);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main form */
+main {
+  max-width: 700px;
+  margin: 25px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Titles */
+h1 {
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+h2 {
+  color: #1e3c72;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #1e3c72;
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 10px rgba(30,60,114,0.2);
+  outline: none;
+}
+
+/* Member cards */
+.member {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f0f4f8;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.member h3 {
+  margin-bottom: 12px;
+  color: #1e3c72;
+  font-size: 20px;
+}
+
+/* Submit button */
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #274b8f;
+  transform: translateY(-3px);
+}
+
+/* Success message */
+#successMessage {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: none;
+}
+
+/* Responsive */
+@media (min-width: 768px){
+  main {
+    padding: 40px;
+  }
+}
+</style>
+</head>
+<body>
+
+<main>
+  <!-- عنوان المسابقة داخل الفورم -->
+  <h1>IoT & AI Challenge</h1>
+
+  <form id="registrationForm">
+    <h2>Informations du chef du groupe</h2>
+    <label for="nomChef">Nom :</label>
+    <input type="text" id="nomChef" name="nomChef" placeholder="Entrez le nom" required>
+
+    <label for="prenomChef">Prénom :</label>
+    <input type="text" id="prenomChef" name="prenomChef" placeholder="Entrez le prénom" required>
+
+    <label for="classeChef">Classe :</label>
+    <input type="text" id="classeChef" name="classeChef" placeholder="Ex: 3ème" required>
+
+    <label for="emailChef">Email :</label>
+    <input type="email" id="emailChef" name="emailChef" placeholder="Ex: example@mail.com" required>
+
+    <label for="telChef">Numéro de téléphone :</label>
+    <input type="tel" id="telChef" name="telChef" placeholder="Ex: +216..." required>
+
+    <h2>Membres du groupe</h2>
+
+    <div class="member">
+      <h3>Membre 1 <span style="color:red;">*</span></h3>
+      <label>Nom :</label>
+      <input type="text" name="nom1" placeholder="Entrez le nom" >
+      <label>Prénom :</label>
+      <input type="text" name="prenom1" placeholder="Entrez le prénom" >
+      <label>Classe :</label>
+      <input type="text" name="classe1" placeholder="Ex: 3ème" >
+    </div>
+
+    <div class="member">
+      <h3>Membre 2 (Optionnel)</h3>
+      <label>Nom :</label>
+      <input type="text" name="nom2" placeholder="Entrez le nom">
+      <label>Prénom :</label>
+      <input type="text" name="prenom2" placeholder="Entrez le prénom">
+      <label>Classe :</label>
+      <input type="text" name="classe2" placeholder="Ex: 3ème">
+    </div>
+
+    <div class="member">
+      <h3>Membre 3 (Optionnel)</h3>
+      <label>Nom :</label>
+      <input type="text" name="nom3" placeholder="Entrez le nom">
+      <label>Prénom :</label>
+      <input type="text" name="prenom3" placeholder="Entrez le prénom">
+      <label>Classe :</label>
+      <input type="text" name="classe3" placeholder="Ex: 3ème">
+    </div>
+
+    <div class="member">
+      <h3>Membre 4 (Optionnel)</h3>
+      <label>Nom :</label>
+      <input type="text" name="nom4" placeholder="Entrez le nom">
+      <label>Prénom :</label>
+      <input type="text" name="prenom4" placeholder="Entrez le prénom">
+      <label>Classe :</label>
+      <input type="text" name="classe4" placeholder="Ex: 3ème">
+    </div>
+
+    <button type="submit">Envoyer</button>
+
+    <!-- رسالة نجاح -->
+    <div id="successMessage">Formulaire envoyé avec succès ! Merci pour votre inscription.</div>
+  </form>
+</main>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwQO8hzuzRe4-2EKDM0pgeCxhmN5CUT_Ny7BkhAekacdVrhdu_r_8YuEEqVhW_9dx3yRQ/exec";
+
+document.getElementById('registrationForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new URLSearchParams(new FormData(form));
+
+  fetch(SCRIPT_URL, { method: "POST", body: data })
+    .then(response => response.json())
+    .then(result => {
+      if(result.result === "success"){
+        form.reset();
+        const successMsg = document.getElementById('successMessage');
+        successMsg.style.display = "block";
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000);
+      } else {
+        alert("حدث خطأ أثناء إرسال البيانات: " + result.message);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert("حدث خطأ أثناء الإرسال. تحقق من الرابط و إعدادات Web App.\n\n" + err);
+    });
+});
+</script>
+
+
+</body>
+</html>
